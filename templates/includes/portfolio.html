@@ -1,0 +1,36 @@
+<!-- Blog Start -->
+<div class="container-fluid pt-5" id="portfolio">
+  <div class="container">
+    <div
+      class="position-relative d-flex align-items-center justify-content-center"
+    >
+      <h1
+        class="display-1 text-uppercase text-white"
+        style="-webkit-text-stroke: 1px #dee2e6"
+      >
+        PROJECT
+      </h1>
+      <h1 class="position-absolute text-uppercase text-primary">
+        MY Portfolio
+      </h1>
+    </div>
+    <div class="row">
+      {% for project in projects %}
+      <div class="col-lg-4 mb-5">
+        <div class="position-relative mb-4">
+          <img
+            class="img-fluid rounded w-100"
+            src="{{ project.image.url}}"
+            alt=""
+          />
+        </div>
+        <h5 class="font-weight-medium mb-4">{{ project.project_name }}</h5>
+        <a class="btn btn-sm btn-outline-primary py-2" href="">More </a>
+        <a class="btn btn-sm btn-outline-secondary py-2" href="">View </a>
+        <a class="btn btn-sm btn-outline-primary py-2" href="">Source Code</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- Blog End -->
